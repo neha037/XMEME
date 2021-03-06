@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">New Meme</h1>
+        <div class="col-6 offset-3">
+            <form action="/memeland" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Your name</label>
+                    <input class="form-control" type="text" id="name" name="meme[name]" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="caption">Caption</label>
+                    <input class="form-control" type="text" id="caption" name="meme[caption]" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="url">Image url</label>
+                    <input class="form-control" type="text" id="url" name="meme[url]" required>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-info">Add Meme</button>
+                </div>
+            </form>
+            <a class="card-link btn btn-success" href="/memeland">All Memes</a>
+        </div>
+    </div>

@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate')%>
+    <h1>All memes</h1>
+
+    <div class="container">
+        <div class="row">
+            <%for (let meme of allmemes){%>
+                <div class="col-sm  my-3">
+                    <div class="card " style="width: 18rem; ">
+                        <img src="<%=meme.url %>" class="card-img-top ">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= meme.name %>
+                            </h5>
+                            <p class="card-text">
+                                <%= meme.caption%>
+                            </p>
+                            <a href="/memeland/<%=meme._id%>" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+            <% }%>
+        </div>
+    </div>
